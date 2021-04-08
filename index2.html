@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container mw-100 overflow-hidden">
+    
+    <div class="row">
+      <div class="col-sm-12 py-2 d-flex text-white bg-warning justify-content-center align-items-center"><h3 class="display-4">Chat!</h3></div>
+    </div>
+    
+    
+      <div class="row mt-5" style="height: 450px;">
+      <div class="col-lg-4 m-auto" id="userDiv">
+        <form id="addReview">
+          <div class="alert alert-warning text-center">Tell us just a little bit about yourself.</div>
+          <div class="form-group">
+            <label for="userName"></label>
+            <input type="text" class="form-control" id="userName" aria-describedby="userName" placeholder="Enter name">
+          </div>
+          <div class="form-group">
+            <label for="userAge"></label>
+            <input type="text" class="form-control" id="userAge" aria-describedby="userAge" placeholder="Enter age">
+          </div>
+          
+          <button id="submit" type="button" class="btn btn-warning text-white float-right">Submit</button>
+        </form>
+      </div>
+      <div class="col-lg-7 mb-4 overflow-hidden" style="height: 380px;" id="DisplayDiv">
+        <table id="table" class="hidden">
+          <thead>
+            <tr>
+              <th scope="col"><p class="mr-5">User</p></th>
+              <th scope="col"><p class="mr-5">Message</p></th>
+            </tr>
+          </thead>
+          <tbody>
+            <td><p class="mr-5 bg-light text-dark p-2 rounded border text-nowrap"><b>Alexandria</b> | 32</p></td>
+            <td><p class="mr-5 bg-warning px-5 py-1 rounded border">So nice to meet you!!!</p></td>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="messageDiv" class="row hidden">
+      <div class="col-sm-6 bg-light rounded text-white mx-auto">
+        <form id="messageForm">
+        <div class="form-group">
+          <label for="messageInput"></label>
+          <input type="text" class="form-control" id="messageInput" aria-describedby="message" placeholder="Enter message...">
+        </div>
+        
+        <button id="submitMessage" type="button" class="btn btn-secondary rounded text-white float-right">Submit</button>
+      </form>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+  
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script2.js"></script>
+  <!-- <script src="traversyTheDom.js"></script> -->
+</body>
+</html>

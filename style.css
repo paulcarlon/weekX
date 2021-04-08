@@ -1,0 +1,8 @@
+tr,
+td {
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
