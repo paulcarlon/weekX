@@ -27,8 +27,15 @@ let users = [];
 let userId = 0;
 
 cliq('submit', () => {
-  users.push(new User(userId++, getValue('userName'), getValue('userAge')));
-  enterChat();
+  let username = document.getElementById('userName');
+  if (username.value !== '') {
+    users.push(new User(userId++, getValue('userName'), getValue('userAge')));
+    enterChat();
+  } else {
+    let attentionDiv = document.getElementById('attention');
+    attentionDiv.classList = 'alert alert-danger text-center text-bold';
+    attentionDiv.innerText = 'Please enter a name';
+  }
 });
 
 function cliq(id, action) {
@@ -104,9 +111,12 @@ btn.onclick = () => {
 };
 
 function botResponse(id) {
-  setTimeout(() => {
-    let table = document.getElementById('table');
-    let row = table.insertRow(1);
-    row.innerHTML += botText[id];
-  }, 5500);
+  if (id < 3) {
+    setTimeout(() => {
+      let table = document.getElementById('table');
+      let row = table.insertRow(1);
+      row.innerHTML += botText[id];
+    }, 5500);
+  }
 }
+console.log(document.all[9]);
